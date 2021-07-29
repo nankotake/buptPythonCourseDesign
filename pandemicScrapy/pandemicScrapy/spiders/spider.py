@@ -1,5 +1,6 @@
 import scrapy
 from pandemicScrapy.items import PandemicscrapyItem
+# from pandemicScrapy.pandemicScrapy.items import PandemicscrapyItem
 
 
 # 定义类
@@ -17,4 +18,4 @@ class pandemicScrapy(scrapy.spiders.Spider):
             item['cure'] = int(each.xpath('./tr/td[3]/text()').extract()[0])
             item['death'] = int(each.xpath('./tr/td[4]/text()').extract()[0])
             if item['country']:
-                yield item # 若获取到国家则返回
+                yield item  # 若获取到国家则返回

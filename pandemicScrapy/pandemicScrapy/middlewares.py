@@ -80,7 +80,7 @@ class PandemicscrapyDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
-        self.driver = webdriver.Edge(executable_path=r'C:\Users\wangj\OneDrive\Code\Python\pandemic-design\msedgedriver.exe')
+        self.driver = webdriver.Edge(executable_path=r'..\msedgedriver.exe')
         self.driver.get(request.url)
         time.sleep(5)
         html = self.driver.page_source
